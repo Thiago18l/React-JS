@@ -11,10 +11,16 @@ export default {
     },
     async create(req: Request, res: Response){
         const emailService = new EmailService();
-        emailService.sendMail(
-            { name: 'Thiago Lopes', email: 'thiago.lopes.dev@gmail.com'},
-            { subject: 'Bem-vindo ao Sistema', body: 'Bem vindo'}
-            );
+        emailService.sendMail({   
+            to: { 
+            name: 'Thiago Lopes', 
+            email: 'thiago.lopes.dev@gmail.com'
+        },
+            message: { 
+                subject: 'Bem-vindo ao Sistema',
+                body: 'Bem vindo'
+            }
+        }    );
             return res.send('Sucesso'); 
     }
     
