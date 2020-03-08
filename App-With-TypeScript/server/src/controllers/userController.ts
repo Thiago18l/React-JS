@@ -21,7 +21,7 @@ export default {
                 body: 'Bem vindo'
             }
         }    );
-            return res.send('Sucesso'); 
+            return res.send(); 
     }
     
 }
